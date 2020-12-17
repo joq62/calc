@@ -1,5 +1,5 @@
 all:
-	erl -pa ebin -sname calc -run math boot -setcookie abc -detached
+	erl -pa ebin -sname calc -run calc boot -setcookie abc -detached
 
 test:
 	erl -pa ebin -sname calc -run calc boot -setcookie abc
