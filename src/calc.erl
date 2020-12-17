@@ -88,20 +88,20 @@ init([]) ->
     ok=application:start(divi_service),
     ok=application:start(multi_service),
    
-    {ok,[{application,adder_service,InfoAdder_service}]}=file:consult("./ebin/adder_service.app"),
-    {vsn,VsnAdder_service}=lists:keyfind(vsn,1,InfoAdder_service),
+  %  {ok,[{application,adder_service,InfoAdder_service}]}=file:consult("/ebin/adder_service.app"),
+  %  {vsn,VsnAdder_service}=lists:keyfind(vsn,1,InfoAdder_service),
     
-    {ok,[{application,divi_service,InfoDivi_service}]}=file:consult("./ebin/divi_service.app"),
-    {vsn,VsnDivi_service}=lists:keyfind(vsn,1,InfoDivi_service),
+  %  {ok,[{application,divi_service,InfoDivi_service}]}=file:consult("./ebin/divi_service.app"),
+  %  {vsn,VsnDivi_service}=lists:keyfind(vsn,1,InfoDivi_service),
 
-    {ok,[{application,multi_service,InfoMulti_service}]}=file:consult("./ebin/multi_service.app"),
-    {vsn,VsnMulti_service}=lists:keyfind(vsn,1,InfoMulti_service),
+  %  {ok,[{application,multi_service,InfoMulti_service}]}=file:consult("./ebin/multi_service.app"),
+%    {vsn,VsnMulti_service}=lists:keyfind(vsn,1,InfoMulti_service),
 
-    {ok,[{application,common,InfoCommon}]}=file:consult("./ebin/common.app"),
-    {vsn,VsnCommon}=lists:keyfind(vsn,1,InfoCommon),
+ %   {ok,[{application,common,InfoCommon}]}=file:consult("./ebin/common.app"),
+ %   {vsn,VsnCommon}=lists:keyfind(vsn,1,InfoCommon),
 
-    {ok,[{application,calc,InfoApp}]}=file:consult("./ebin/calc.app"),
-    {vsn,VsnApp}=lists:keyfind(vsn,1,InfoApp),
+ %   {ok,[{application,calc,InfoApp}]}=file:consult("./ebin/calc.app"),
+ %   {vsn,VsnApp}=lists:keyfind(vsn,1,InfoApp),
 
  %   io:format("~p~n",["./ebin/common.app"]),
    
@@ -109,11 +109,11 @@ init([]) ->
 
   %  io:format("~p~n",[VsnCommon]),
   
-    {ok, #state{services=[{"adder_service",VsnAdder_service},
-			  {"divi_service",VsnDivi_service},
-			  {"multi_service",VsnMulti_service},
-			  {"common",VsnCommon},
-			  {"calc",VsnApp}
+    {ok, #state{services=[{"adder_service"},
+			  {"divi_service"},
+			  {"multi_service"},
+			  {"common"},
+			  {"calc"}
 			 ]}}.
 
 %% --------------------------------------------------------------------
