@@ -83,7 +83,7 @@ services()->
 
 init([]) ->
     
-    ok=application:start(common),
+    application:start(common),
     ok=application:start(adder_service),
     ok=application:start(divi_service),
     ok=application:start(multi_service),
